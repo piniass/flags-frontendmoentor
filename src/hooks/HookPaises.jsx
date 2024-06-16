@@ -4,11 +4,13 @@ import axios from "axios";
 export const usePaises = () => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
-
+    const url = 'data.json'
+    console.log(url)
     const getPaises = async () => {
         try {
             setLoading(true);
-            const response = await axios.get('data.json');
+            const response = await axios.get(url);
+            console.log(response)
             setData(response.data);
         } catch (error) {
             console.error("Error fetching data:", error);
