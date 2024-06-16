@@ -9,7 +9,7 @@ export const usePaises = () => {
     const getPaises = async () => {
         try {
             setLoading(true);
-            const response = await axios.get('data.json');
+            const response = await axios.get('/data.json');
             console.log(response)
             setData(response.data);
         } catch (error) {
