@@ -4,7 +4,7 @@ import axios from "axios";
 export const usePaises = () => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
-    const url = 'data.json'
+    const url = '../data.json'
     console.log(url)
     const getPaises = async () => {
         try {
