@@ -5,12 +5,12 @@ export const usePaises = () => {
     const [data, setData] = useState([]);
     const [loading, setLoading] = useState(false);
     const url = 'data.json'
-    console.log(url)
+    // console.log(url)
     const getPaises = async () => {
         try {
             setLoading(true);
             const response = await axios.get('/data.json');
-            console.log(response)
+            // console.log(response)
             setData(response.data);
         } catch (error) {
             console.error("Error fetching data:", error);
